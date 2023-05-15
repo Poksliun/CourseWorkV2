@@ -61,7 +61,7 @@ class FileHandler:
         false_counter = 0
         for image in list(os.walk(input_data_dir))[0][2]:
             img = Image.open(f"{input_data_dir}/{image}")
-            img_crop = img.crop((830, 1465, 1435, 1570)).convert('L')
+            img_crop = img.crop((1200, 2000, 1522, 2154)).convert('L')
             if "true" in image.lower():
                 img_crop.save(f"{output_data_dir}/true-{true_counter}.jpg")
                 true_counter += 1
